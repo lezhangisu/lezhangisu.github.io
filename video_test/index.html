@@ -18,7 +18,7 @@
 
 		/*****START 播放按钮变○圆形 START*****/
 		.video-js .vjs-big-play-button{
-		    font-size: 2.5em;
+		    font-size: 8em;
 		    line-height: 2.3em;
 		    height: 2.5em;
 		    width: 2.5em;
@@ -54,12 +54,12 @@
   	}
   	.video-js{
   		float:left;
-  		width: 70% !important;
+  		width: 75% !important;
   		height: 720px;
   	}
   	.vjs-playlist{
   		float:left;
-  		width: 30%;
+  		width: 25%;
   		height: 720px;
   	}
   	.vjs-playlist-item{
@@ -86,7 +86,7 @@
 -->
 <body>
 	<div class="player-container">
-		<video id="example" class="video-js vjs-default-skin vjs-big-play-centered vjs-v7 vjs-user-active" playsinline webkit-playsinline autoplay controls preload="auto" width="100%" height="100%"
+		<video id="jtv" class="video-js vjs-default-skin vjs-big-play-centered vjs-v7 vjs-user-active" playsinline webkit-playsinline autoplay controls preload="auto" width="100%" height="100%"
 	  		data-setup='{"techOrder": ["html5","flash"]}'>
 		</video>
 		 <div class="vjs-playlist playlist-container">
@@ -98,9 +98,113 @@
     </div>
 </body>
 <script type="text/javascript">
-	var player = videojs('example');
+	var player = videojs('jtv');
 
 	player.playlist([{
+	  name:'NHK総合テレビ',//视频标题
+	  description:'Explore the depths of our planet\'s oceans.',//视频描述
+	  duration:52,//视频总时长，单位秒(s)
+	  sources: [{//视频资源地址以及视频的MIME类型
+	    src: 'http://50.7.74.29:8880/hlsok/j00033/index.m3u8',
+	    type: 'application/x-mpegurl'
+	  }],
+	  //视频封面地址
+	  poster:'img/nhkg.png',
+	  //右侧视频播放列表的图片
+	  thumbnail: [
+	  	{//默认图片
+          srcset: 'img/nhkg.png',
+          type: 'image/jpeg',
+          media: '(min-width: 400px;)'
+        }
+  	  ]
+	}, {
+	  name:'NHK教育テレビ',//视频标题
+	  description:'Explore the depths of our planet\'s oceans.',//视频描述
+	  duration:52,//视频总时长，单位秒(s)
+	  sources: [{//视频资源地址以及视频的MIME类型
+	    src: 'http://50.7.74.29:8880/hlsok/j00035/index.m3u8',
+	    type: 'application/x-mpegurl'
+	  }],
+	  //视频封面地址
+	  poster:'img/nhkedu.png',
+	  //右侧视频播放列表的图片
+	  thumbnail: [
+	  	{//默认图片
+          srcset: 'img/nhkedu.png',
+          type: 'image/jpeg',
+          media: '(min-width: 400px;)'
+        }
+  	  ]
+	}, {
+	  name:'NHK東京',
+	  description:'Explore the depths of our planet\'s oceans.',
+	  duration:596,
+	  sources: [{
+	    src: 'http://50.7.74.29:8880/hlsok/j00033/index.m3u8',
+	    type: 'application/x-mpegurl'
+	  }],
+		poster:'img/nhk.png',
+		thumbnail: [
+	  	{//默认图片
+          srcset: 'img/nhk.png',
+          type: 'image/jpeg',
+          media: '(min-width: 400px;)'
+        }
+  	  ]
+	}, {
+	  name:'NHK大阪',
+	  description:'Explore the depths of our planet\'s oceans.',
+	  duration:596,
+	  sources: [{
+	    src: 'http://50.7.74.29:8880/hlsok/j00032/index.m3u8',
+	    type: 'application/x-mpegurl'
+	  }],
+		poster:'img/nhk.png',
+		thumbnail: [
+	  	{//默认图片
+          srcset: 'img/nhk.png',
+          type: 'image/jpeg',
+          media: '(min-width: 400px;)'
+        }
+  	  ]
+	}, {
+	  name:'NHK BS1',//视频标题
+	  description:'Explore the depths of our planet\'s oceans.',//视频描述
+	  duration:52,//视频总时长，单位秒(s)
+	  sources: [{//视频资源地址以及视频的MIME类型
+	    src: 'http://50.7.74.29:8880/hlsok/j00037/index.m3u8',
+	    type: 'application/x-mpegurl'
+	  }],
+	  //视频封面地址
+	  poster:'img/nhkbs1.png',
+	  //右侧视频播放列表的图片
+	  thumbnail: [
+	  	{//默认图片
+          srcset: 'img/nhkbs1.png',
+          type: 'image/jpeg',
+          media: '(min-width: 400px;)'
+        }
+  	  ]
+	}, {
+	  name:'NHK BSP',//视频标题
+	  description:'Explore the depths of our planet\'s oceans.',//视频描述
+	  duration:52,//视频总时长，单位秒(s)
+	  sources: [{//视频资源地址以及视频的MIME类型
+	    src: 'http://50.7.74.29:8880/hlsok/j00036/index.m3u8',
+	    type: 'application/x-mpegurl'
+	  }],
+	  //视频封面地址
+	  poster:'img/nhkbsp.png',
+	  //右侧视频播放列表的图片
+	  thumbnail: [
+	  	{//默认图片
+          srcset: 'img/nhkbsp.png',
+          type: 'image/jpeg',
+          media: '(min-width: 400px;)'
+        }
+  	  ]
+	}, {
 	  name:'テレビ朝日',//视频标题
 	  description:'Explore the depths of our planet\'s oceans.',//视频描述
 	  duration:52,//视频总时长，单位秒(s)
@@ -114,22 +218,6 @@
 	  thumbnail: [
 	  	{//默认图片
           srcset: 'img/tvasahi.png',
-          type: 'image/jpeg',
-          media: '(min-width: 400px;)'
-        }
-  	  ]
-	}, {
-	  name:'TBSテレビ',//视频标题
-	  description:'Explore the depths of our planet\'s oceans.',//视频描述
-	  duration:734,//视频总时长，单位秒(s)
-	  sources: [{//视频资源地址以及视频的MIME类型
-	    src: 'http://50.7.74.29:8880/hlsok/j00051/index.m3u8',
-	    type: 'application/x-mpegurl'
-	  }],
-		poster:'img/tbs.png',
-		thumbnail: [
-	  	{//默认图片
-          srcset: 'img/tbs.png',
           type: 'image/jpeg',
           media: '(min-width: 400px;)'
         }
@@ -183,6 +271,86 @@
         }
   	  ]
 	}, {
+	  name:'TBSテレビ',//视频标题
+	  description:'Explore the depths of our planet\'s oceans.',//视频描述
+	  duration:734,//视频总时长，单位秒(s)
+	  sources: [{//视频资源地址以及视频的MIME类型
+	    src: 'http://50.7.74.29:8880/hlsok/j00051/index.m3u8',
+	    type: 'application/x-mpegurl'
+	  }],
+		poster:'img/tbs.png',
+		thumbnail: [
+	  	{//默认图片
+          srcset: 'img/tbs.png',
+          type: 'image/jpeg',
+          media: '(min-width: 400px;)'
+        }
+  	  ]
+	}, {
+	  name:'テレビ東京',
+	  description:'Explore the depths of our planet\'s oceans.',
+	  duration:596,
+	  sources: [{
+	    src: 'http://50.7.74.29:8880/hlsok/j00012/index.m3u8',
+	    type: 'application/x-mpegurl'
+	  }],
+		poster:'img/tvtokyo.png',
+		thumbnail: [
+	  	{//默认图片
+          srcset: 'img/tvtokyo.png',
+          type: 'image/jpeg',
+          media: '(min-width: 400px;)'
+        }
+  	  ]
+	}, {
+	  name:'テレビ大阪',
+	  description:'Explore the depths of our planet\'s oceans.',
+	  duration:596,
+	  sources: [{
+	    src: 'http://50.7.74.29:8880/hlsok/j00013/index.m3u8',
+	    type: 'application/x-mpegurl'
+	  }],
+		poster:'img/tvosaka.png',
+		thumbnail: [
+	  	{//默认图片
+          srcset: 'img/tvosaka.png',
+          type: 'image/jpeg',
+          media: '(min-width: 400px;)'
+        }
+  	  ]
+	}, {
+	  name:'BS Asahi',
+	  description:'Explore the depths of our planet\'s oceans.',
+	  duration:596,
+	  sources: [{
+	    src: 'http://50.7.74.29:8880/hlsok/j00048/index.m3u8',
+	    type: 'application/x-mpegurl'
+	  }],
+		poster:'img/bsasahi.png',
+		thumbnail: [
+	  	{//默认图片
+          srcset: 'img/bsasahi.png',
+          type: 'image/jpeg',
+          media: '(min-width: 400px;)'
+        }
+  	  ]
+	}, {
+	  name:'BS Fuji',
+	  description:'Explore the depths of our planet\'s oceans.',
+	  duration:596,
+	  sources: [{
+	    src: 'http://50.7.74.29:8880/hlsok/j00049/index.m3u8',
+	    type: 'application/x-mpegurl'
+	  }],
+		poster:'img/bsfuji.png',
+		thumbnail: [
+	  	{//默认图片
+          srcset: 'img/bsfuji.png',
+          type: 'image/jpeg',
+          media: '(min-width: 400px;)'
+        }
+  	  ]
+	}, {
 	  name:'BS Nippon',
 	  description:'Explore the depths of our planet\'s oceans.',
 	  duration:596,
@@ -198,10 +366,171 @@
           media: '(min-width: 400px;)'
         }
   	  ]
+	}, {
+	  name:'BS TV Tokyo',
+	  description:'Explore the depths of our planet\'s oceans.',
+	  duration:596,
+	  sources: [{
+	    src: 'http://50.7.74.29:8880/hlsok/j00050/index.m3u8',
+	    type: 'application/x-mpegurl'
+	  }],
+		poster:'img/bstokyo.png',
+		thumbnail: [
+	  	{//默认图片
+          srcset: 'img/bstokyo.png',
+          type: 'image/jpeg',
+          media: '(min-width: 400px;)'
+        }
+  	  ]
+	}, {
+	  name:'関西テレビ',
+	  description:'Explore the depths of our planet\'s oceans.',
+	  duration:596,
+	  sources: [{
+	    src: 'http://50.7.74.29:8880/hlsok/j00006/index.m3u8',
+	    type: 'application/x-mpegurl'
+	  }],
+		poster:'img/kansai.png',
+		thumbnail: [
+	  	{//默认图片
+          srcset: 'img/kansai.png',
+          type: 'image/jpeg',
+          media: '(min-width: 400px;)'
+        }
+  	  ]
+	}, {
+	  name:'ファミリー劇場',
+	  description:'Explore the depths of our planet\'s oceans.',
+	  duration:596,
+	  sources: [{
+	    src: 'http://50.7.74.29:8880/hlsok/j00011/index.m3u8',
+	    type: 'application/x-mpegurl'
+	  }],
+		poster:'img/family.png',
+		thumbnail: [
+	  	{//默认图片
+          srcset: 'img/family.png',
+          type: 'image/jpeg',
+          media: '(min-width: 400px;)'
+        }
+  	  ]
+	}, {
+	  name:'Jsports 1',
+	  description:'Explore the depths of our planet\'s oceans.',
+	  duration:596,
+	  sources: [{
+	    src: 'http://50.7.74.29:8880/hlsok/j00042/index.m3u8',
+	    type: 'application/x-mpegurl'
+	  }],
+		poster:'img/jsports1.png',
+		thumbnail: [
+	  	{//默认图片
+          srcset: 'img/jsports1.png',
+          type: 'image/jpeg',
+          media: '(min-width: 400px;)'
+        }
+  	  ]
+	}, {
+	  name:'Jsports 2',
+	  description:'Explore the depths of our planet\'s oceans.',
+	  duration:596,
+	  sources: [{
+	    src: 'http://50.7.74.29:8880/hlsok/j00041/index.m3u8',
+	    type: 'application/x-mpegurl'
+	  }],
+		poster:'img/jsports2.png',
+		thumbnail: [
+	  	{//默认图片
+          srcset: 'img/jsports2.png',
+          type: 'image/jpeg',
+          media: '(min-width: 400px;)'
+        }
+  	  ]
+	}, {
+	  name:'Jsports 3',
+	  description:'Explore the depths of our planet\'s oceans.',
+	  duration:596,
+	  sources: [{
+	    src: 'http://50.7.74.29:8880/hlsok/j00040/index.m3u8',
+	    type: 'application/x-mpegurl'
+	  }],
+		poster:'img/jsports3.png',
+		thumbnail: [
+	  	{//默认图片
+          srcset: 'img/jsports3.png',
+          type: 'image/jpeg',
+          media: '(min-width: 400px;)'
+        }
+  	  ]
+	}, {
+	  name:'Jsports 4',
+	  description:'Explore the depths of our planet\'s oceans.',
+	  duration:596,
+	  sources: [{
+	    src: 'http://50.7.74.29:8880/hlsok/j00039/index.m3u8',
+	    type: 'application/x-mpegurl'
+	  }],
+		poster:'img/jsports4.png',
+		thumbnail: [
+	  	{//默认图片
+          srcset: 'img/jsports4.png',
+          type: 'image/jpeg',
+          media: '(min-width: 400px;)'
+        }
+  	  ]
+	}, {
+	  name:'WNI天氣',
+	  description:'Explore the depths of our planet\'s oceans.',
+	  duration:596,
+	  sources: [{
+	    src: 'https://movie.mcas.jp/mcas/smil:wn1.smil/master.m3u8',
+	    type: 'application/x-mpegurl'
+	  }],
+		poster:'img/wni.png',
+		thumbnail: [
+	  	{//默认图片
+          srcset: 'img/wni.png',
+          type: 'image/jpeg',
+          media: '(min-width: 400px;)'
+        }
+  	  ]
+	}, {
+	  name:'Tokyo MX1',
+	  description:'Explore the depths of our planet\'s oceans.',
+	  duration:596,
+	  sources: [{
+	    src: 'https://movie.mcas.jp/mcas/mx1_2/master.m3u8',
+	    type: 'application/x-mpegurl'
+	  }],
+		poster:'img/tokyomx.png',
+		thumbnail: [
+	  	{//默认图片
+          srcset: 'img/tokyomx.png',
+          type: 'image/jpeg',
+          media: '(min-width: 400px;)'
+        }
+  	  ]
+	}, {
+	  name:'Tokyo MX2',
+	  description:'Explore the depths of our planet\'s oceans.',
+	  duration:596,
+	  sources: [{
+	    src: 'https://movie.mcas.jp/mcas/mx2_2/master.m3u8',
+	    type: 'application/x-mpegurl'
+	  }],
+		poster:'img/tokyomx.png',
+		thumbnail: [
+	  	{//默认图片
+          srcset: 'img/tokyomx.png',
+          type: 'image/jpeg',
+          media: '(min-width: 400px;)'
+        }
+  	  ]
 	}]);
 
 	player.playlistUi();
 	player.playlist.autoadvance(0); // 自动播放， 0秒延时
 	player.playlist.repeat(true); //循环播放
+	player.on('dblclick', function() { player.requestFullscreen(); });
 </script>
 </html>
