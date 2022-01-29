@@ -103,7 +103,7 @@
 	player.playlist([{
 	  name:'NHK総合テレビ',//视频标题
 	  description:'日本电视直播频道',//视频描述
-	  duration:52,//视频总时长，单位秒(s)
+	  duration:0,//视频总时长，单位秒(s)
 	  sources: [{//视频资源地址以及视频的MIME类型
 	    src: 'http://50.7.74.29:8880/hlsok/j00033/index.m3u8',
 	    type: 'application/x-mpegurl'
@@ -119,9 +119,27 @@
         }
   	  ]
 	}, {
+	  name:'NHK総合テレビ 候补',//视频标题
+	  description:'日本电视直播频道',//视频描述
+	  duration:0,//视频总时长，单位秒(s)
+	  sources: [{//视频资源地址以及视频的MIME类型
+	    src: 'https://nhk1.mov3.co/hls/nhk.m3u8',
+	    type: 'application/x-mpegurl'
+	  }],
+	  //视频封面地址
+	  poster:'img/nhkg.png',
+	  //右侧视频播放列表的图片
+	  thumbnail: [
+	  	{//默认图片
+          srcset: 'img/nhkg.png',
+          type: 'image/jpeg',
+          media: '(min-width: 400px;)'
+        }
+  	  ]
+	}, {
 	  name:'NHK教育テレビ',//视频标题
 	  description:'日本电视直播频道',//视频描述
-	  duration:52,//视频总时长，单位秒(s)
+	  duration:0,//视频总时长，单位秒(s)
 	  sources: [{//视频资源地址以及视频的MIME类型
 	    src: 'http://50.7.74.29:8880/hlsok/j00035/index.m3u8',
 	    type: 'application/x-mpegurl'
@@ -137,9 +155,27 @@
         }
   	  ]
 	}, {
+	  name:'NHK PLUS',//视频标题
+	  description:'日本电视直播频道',//视频描述
+	  duration:0,//视频总时长，单位秒(s)
+	  sources: [{//视频资源地址以及视频的MIME类型
+	    src: 'http://iptv.tvfix.org/hls/nhke.m3u8',
+	    type: 'application/x-mpegurl'
+	  }],
+	  //视频封面地址
+	  poster:'img/nhk.png',
+	  //右侧视频播放列表的图片
+	  thumbnail: [
+	  	{//默认图片
+          srcset: 'img/nhk.png',
+          type: 'image/jpeg',
+          media: '(min-width: 400px;)'
+        }
+  	  ]
+	}, {
 	  name:'NHK東京',
 	  description:'日本电视直播频道',
-	  duration:596,
+	  duration:0,
 	  sources: [{
 	    src: 'http://50.7.74.29:8880/hlsok/j00033/index.m3u8',
 	    type: 'application/x-mpegurl'
@@ -155,7 +191,7 @@
 	}, {
 	  name:'NHK大阪',
 	  description:'日本电视直播频道',
-	  duration:596,
+	  duration:0,
 	  sources: [{
 	    src: 'http://50.7.74.29:8880/hlsok/j00032/index.m3u8',
 	    type: 'application/x-mpegurl'
@@ -171,7 +207,7 @@
 	}, {
 	  name:'NHK BS1',//视频标题
 	  description:'日本电视直播频道',//视频描述
-	  duration:52,//视频总时长，单位秒(s)
+	  duration:0,//视频总时长，单位秒(s)
 	  sources: [{//视频资源地址以及视频的MIME类型
 	    src: 'http://50.7.74.29:8880/hlsok/j00037/index.m3u8',
 	    type: 'application/x-mpegurl'
@@ -189,7 +225,7 @@
 	}, {
 	  name:'NHK BSP',//视频标题
 	  description:'日本电视直播频道',//视频描述
-	  duration:52,//视频总时长，单位秒(s)
+	  duration:0,//视频总时长，单位秒(s)
 	  sources: [{//视频资源地址以及视频的MIME类型
 	    src: 'http://50.7.74.29:8880/hlsok/j00036/index.m3u8',
 	    type: 'application/x-mpegurl'
@@ -207,7 +243,7 @@
 	}, {
 	  name:'テレビ朝日',//视频标题
 	  description:'日本电视直播频道',//视频描述
-	  duration:52,//视频总时长，单位秒(s)
+	  duration:0,//视频总时长，单位秒(s)
 	  sources: [{//视频资源地址以及视频的MIME类型
 	    src: 'http://50.7.74.29:8880/hlsok/j00014/index.m3u8',
 	    type: 'application/x-mpegurl'
@@ -225,7 +261,7 @@
 	}, {
 	  name:'フジテレビ',
 	  description:'日本电视直播频道',
-	  duration:596,
+	  duration:0,
 	  sources: [{
 	    src: 'http://50.7.74.29:8880/hlsok/j00031/index.m3u8',
 	    type: 'application/x-mpegurl'
@@ -239,9 +275,25 @@
         }
   	  ]
 	}, {
+	  name:'フジテレビ 候补',
+	  description:'日本电视直播频道',
+	  duration:0,
+	  sources: [{
+	    src: 'https://fujitv1.mov3.co/hls/fujitv.m3u8',
+	    type: 'application/x-mpegurl'
+	  }],
+		poster:'img/fuji.png',
+		thumbnail: [
+	  	{//默认图片
+          srcset: 'img/fuji.png',
+          type: 'image/jpeg',
+          media: '(min-width: 400px;)'
+        }
+  	  ]
+	}, {
 	  name:'日本テレビ',
 	  description:'日本电视直播频道',
-	  duration:596,
+	  duration:0,
 	  sources: [{
 	    src: 'http://50.7.74.29:8880/hlsok/j00004/index.m3u8',
 	    type: 'application/x-mpegurl'
@@ -257,7 +309,7 @@
 	}, {
 	  name:'毎日放送',
 	  description:'日本电视直播频道',
-	  duration:596,
+	  duration:0,
 	  sources: [{
 	    src: 'http://50.7.74.29:8880/hlsok/j00038/index.m3u8',
 	    type: 'application/x-mpegurl'
@@ -289,7 +341,7 @@
 	}, {
 	  name:'テレビ東京',
 	  description:'日本电视直播频道',
-	  duration:596,
+	  duration:0,
 	  sources: [{
 	    src: 'http://50.7.74.29:8880/hlsok/j00012/index.m3u8',
 	    type: 'application/x-mpegurl'
@@ -305,7 +357,7 @@
 	}, {
 	  name:'テレビ大阪',
 	  description:'日本电视直播频道',
-	  duration:596,
+	  duration:0,
 	  sources: [{
 	    src: 'http://50.7.74.29:8880/hlsok/j00013/index.m3u8',
 	    type: 'application/x-mpegurl'
@@ -321,7 +373,7 @@
 	}, {
 	  name:'BS Asahi',
 	  description:'日本电视直播频道',
-	  duration:596,
+	  duration:0,
 	  sources: [{
 	    src: 'http://50.7.74.29:8880/hlsok/j00048/index.m3u8',
 	    type: 'application/x-mpegurl'
@@ -337,7 +389,7 @@
 	}, {
 	  name:'BS Fuji',
 	  description:'日本电视直播频道',
-	  duration:596,
+	  duration:0,
 	  sources: [{
 	    src: 'http://50.7.74.29:8880/hlsok/j00049/index.m3u8',
 	    type: 'application/x-mpegurl'
@@ -353,7 +405,7 @@
 	}, {
 	  name:'BS Nippon',
 	  description:'日本电视直播频道',
-	  duration:596,
+	  duration:0,
 	  sources: [{
 	    src: 'http://50.7.74.29:8880/hlsok/j00047/index.m3u8',
 	    type: 'application/x-mpegurl'
@@ -369,7 +421,7 @@
 	}, {
 	  name:'BS TV Tokyo',
 	  description:'日本电视直播频道',
-	  duration:596,
+	  duration:0,
 	  sources: [{
 	    src: 'http://50.7.74.29:8880/hlsok/j00050/index.m3u8',
 	    type: 'application/x-mpegurl'
@@ -385,7 +437,7 @@
 	}, {
 	  name:'関西テレビ',
 	  description:'日本电视直播频道',
-	  duration:596,
+	  duration:0,
 	  sources: [{
 	    src: 'http://50.7.74.29:8880/hlsok/j00006/index.m3u8',
 	    type: 'application/x-mpegurl'
@@ -401,7 +453,7 @@
 	}, {
 	  name:'ファミリー劇場',
 	  description:'日本电视直播频道',
-	  duration:596,
+	  duration:0,
 	  sources: [{
 	    src: 'http://50.7.74.29:8880/hlsok/j00011/index.m3u8',
 	    type: 'application/x-mpegurl'
@@ -417,7 +469,7 @@
 	}, {
 	  name:'Jsports 1',
 	  description:'日本电视直播频道',
-	  duration:596,
+	  duration:0,
 	  sources: [{
 	    src: 'http://50.7.74.29:8880/hlsok/j00042/index.m3u8',
 	    type: 'application/x-mpegurl'
@@ -433,7 +485,7 @@
 	}, {
 	  name:'Jsports 2',
 	  description:'日本电视直播频道',
-	  duration:596,
+	  duration:0,
 	  sources: [{
 	    src: 'http://50.7.74.29:8880/hlsok/j00041/index.m3u8',
 	    type: 'application/x-mpegurl'
@@ -449,7 +501,7 @@
 	}, {
 	  name:'Jsports 3',
 	  description:'日本电视直播频道',
-	  duration:596,
+	  duration:0,
 	  sources: [{
 	    src: 'http://50.7.74.29:8880/hlsok/j00040/index.m3u8',
 	    type: 'application/x-mpegurl'
@@ -465,7 +517,7 @@
 	}, {
 	  name:'Jsports 4',
 	  description:'日本电视直播频道',
-	  duration:596,
+	  duration:0,
 	  sources: [{
 	    src: 'http://50.7.74.29:8880/hlsok/j00039/index.m3u8',
 	    type: 'application/x-mpegurl'
@@ -481,7 +533,7 @@
 	}, {
 	  name:'WNI天氣',
 	  description:'日本电视直播频道',
-	  duration:596,
+	  duration:0,
 	  sources: [{
 	    src: 'https://movie.mcas.jp/mcas/smil:wn1.smil/master.m3u8',
 	    type: 'application/x-mpegurl'
@@ -497,7 +549,7 @@
 	}, {
 	  name:'Tokyo MX1',
 	  description:'日本电视直播频道',
-	  duration:596,
+	  duration:0,
 	  sources: [{
 	    src: 'https://movie.mcas.jp/mcas/mx1_2/master.m3u8',
 	    type: 'application/x-mpegurl'
@@ -513,7 +565,7 @@
 	}, {
 	  name:'Tokyo MX2',
 	  description:'日本电视直播频道',
-	  duration:596,
+	  duration:0,
 	  sources: [{
 	    src: 'https://movie.mcas.jp/mcas/mx2_2/master.m3u8',
 	    type: 'application/x-mpegurl'
