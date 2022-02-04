@@ -105,7 +105,8 @@
 	  description:'日本电视直播频道',//视频描述
 	  duration:0,//视频总时长，单位秒(s)
 	  sources: [{//视频资源地址以及视频的MIME类型
-	    src: 'http://50.7.74.29:8880/hlsok/j00033/index.m3u8',
+	    // src: 'http://50.7.74.29:8880/hlsok/j00033/index.m3u8',
+			src: 'https://nhk1.mov3.co/hls/nhk.m3u8',
 	    type: 'application/x-mpegurl'
 	  }],
 	  //视频封面地址
@@ -119,19 +120,34 @@
         }
   	  ]
 	}, {
-	  name:'NHK総合テレビ 候补',//视频标题
-	  description:'日本电视直播频道',//视频描述
-	  duration:0,//视频总时长，单位秒(s)
-	  sources: [{//视频资源地址以及视频的MIME类型
-	    src: 'https://nhk1.mov3.co/hls/nhk.m3u8',
+	  name:'フジテレビ',
+	  description:'日本电视直播频道',
+	  duration:0,
+	  sources: [{
+	    src: 'https://fujitv1.mov3.co/hls/fujitv.m3u8',
 	    type: 'application/x-mpegurl'
 	  }],
-	  //视频封面地址
-	  poster:'img/nhkg.png',
-	  //右侧视频播放列表的图片
-	  thumbnail: [
+		poster:'img/fuji.png',
+		thumbnail: [
 	  	{//默认图片
-          srcset: 'img/nhkg.png',
+          srcset: 'img/fuji.png',
+          type: 'image/jpeg',
+          media: '(min-width: 400px;)'
+        }
+  	  ]
+	}, {
+	  name:'日本テレビ',
+	  description:'日本电视直播频道',
+	  duration:0,
+	  sources: [{
+	    // src: 'http://50.7.74.29:8880/hlsok/j00004/index.m3u8',
+			src: 'http://www.news24.jp/livestream/index.m3u8',
+	    type: 'application/x-mpegurl'
+	  }],
+		poster:'img/nippontv.png',
+		thumbnail: [
+	  	{//默认图片
+          srcset: 'img/nippontv.png',
           type: 'image/jpeg',
           media: '(min-width: 400px;)'
         }
@@ -258,55 +274,25 @@
           media: '(min-width: 400px;)'
         }
   	  ]
-	}, {
-	  name:'フジテレビ',
-	  description:'日本电视直播频道',
-	  duration:0,
-	  sources: [{
-	    src: 'http://50.7.74.29:8880/hlsok/j00031/index.m3u8',
-	    type: 'application/x-mpegurl'
-	  }],
-		poster:'img/fuji.png',
-		thumbnail: [
-	  	{//默认图片
-          srcset: 'img/fuji.png',
-          type: 'image/jpeg',
-          media: '(min-width: 400px;)'
-        }
-  	  ]
-	}, {
-	  name:'フジテレビ 候补',
-	  description:'日本电视直播频道',
-	  duration:0,
-	  sources: [{
-	    src: 'https://fujitv1.mov3.co/hls/fujitv.m3u8',
-	    type: 'application/x-mpegurl'
-	  }],
-		poster:'img/fuji.png',
-		thumbnail: [
-	  	{//默认图片
-          srcset: 'img/fuji.png',
-          type: 'image/jpeg',
-          media: '(min-width: 400px;)'
-        }
-  	  ]
-	}, {
-	  name:'日本テレビ',
-	  description:'日本电视直播频道',
-	  duration:0,
-	  sources: [{
-	    src: 'http://50.7.74.29:8880/hlsok/j00004/index.m3u8',
-	    type: 'application/x-mpegurl'
-	  }],
-		poster:'img/nippontv.png',
-		thumbnail: [
-	  	{//默认图片
-          srcset: 'img/nippontv.png',
-          type: 'image/jpeg',
-          media: '(min-width: 400px;)'
-        }
-  	  ]
-	}, {
+	},
+	// {
+	//   name:'フジテレビ',
+	//   description:'日本电视直播频道',
+	//   duration:0,
+	//   sources: [{
+	//     src: 'http://50.7.74.29:8880/hlsok/j00031/index.m3u8',
+	//     type: 'application/x-mpegurl'
+	//   }],
+	// 	poster:'img/fuji.png',
+	// 	thumbnail: [
+	//   	{//默认图片
+  //         srcset: 'img/fuji.png',
+  //         type: 'image/jpeg',
+  //         media: '(min-width: 400px;)'
+  //       }
+  // 	  ]
+	// },
+	{
 	  name:'毎日放送',
 	  description:'日本电视直播频道',
 	  duration:0,
