@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	<meta charset="UTF-8">
+    <title>中国电视直播</title>
+    <link href="css/video-js.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/videojs-playlist-ui.css" />
+    <script src="js/videojs/video.js"></script>
+	<script src="js/videojs-playlist/videojs-playlist.js"></script>
+	<!-- <script src="js/videojs-flash/videojs-flash.js" ></script> -->
+	<script type="text/javascript" src="js/videojs-playlist/videojs-playlist-ui.js" ></script>
+	<script src="lang/zh-CN.js"></script>
+    <style>
+    	/*暂停时显示播放按钮*/
+    	.vjs-paused .vjs-big-play-button,.vjs-paused.vjs-has-started .vjs-big-play-button {
+		    display: block;
+		}
+
+		/*****START 播放按钮变○圆形 START*****/
+		.video-js .vjs-big-play-button{
+		    font-size: 8em;
+		    line-height: 2.3em;
+		    height: 2.5em;
+		    width: 2.5em;
+		    -webkit-border-radius: 2.5em;
+		    -moz-border-radius: 2.5em;
+		    border-radius: 2.5em;
+		    background-color: #73859f;
+		    background-color: rgba(115,133,159,.5);
+		    border-width: 0.15em;
+		    margin-top: -1.25em;
+		    margin-left: -1.75em;
+		}
+		/* 中间的播放箭头 */
+		.vjs-big-play-button .vjs-icon-placeholder {
+		    font-size: 1.63em;
+		}
+		/* 加载圆圈 */
+		.vjs-loading-spinner {
+		    font-size: 2.5em;
+		    width: 2em;
+		    height: 2em;
+		    border-radius: 1em;
+		    margin-top: -1em;
+		    margin-left: -1.5em;
+		}
+
+
+  </style>
+  <style>
+  	.player-container{
+	    background: #1a1a1a;
+    	overflow: auto;
+  	}
+  	.video-js{
+  		float:left;
+  		width: 75% !important;
+  		height: 720px;
+  	}
+  	.vjs-playlist{
+  		float:left;
+  		width: 25%;
+  		height: 720px;
+  	}
+  	.vjs-playlist-item{
+  		border: 1px solid #FFFFFF;
+  	}
+  	.vjs-playlist .vjs-selected{
+  		border: 1px solid #00FF00;
+  	}
+  	.vjs-playlist .vjs-selected img{
+  		opacity: .5;
+  	}
+  </style>
+   <!-- <script type="text/javascript">
+   		videojs.options.flash.swf = "js/videojs-flash/video-js.swf";//flash路径，有一些html播放不了的视频，就需要用到flash播放。这一句话要加在在videojs.js引入之后使用
+   </script> -->
+</head>
+<!--
+	作者：skychion
+	时间：2019-05-27
+	描述：一些关键字段的补充说明
+	1、默认的播放按钮在左上角，在video标签中增加 vjs-big-play-centered 类，即可居中
+	2、禁止在iPhone safari中自动全屏：playsinline参数。注意，在iOS10之前用的是webkit-playsinline。
+	3、播放格式优先级：{"techOrder": ["html5", "flash"]}
+-->
+<body>
+	<div class="player-container">
+		<video id="jtv" class="video-js vjs-default-skin vjs-big-play-centered vjs-v7 vjs-user-active" playsinline webkit-playsinline autoplay controls preload="auto" width="100%" height="100%"
+	  		data-setup='{"fluid": true, "autoplay":true,"html5": {"vhs": {"overrideNative": true},"nativeAudioTracks": false,"nativeVideoTracks": false}'>
+		</video>
+		 <div class="vjs-playlist playlist-container">
+	      <!--
+	        The contents of this element will be filled based on the
+	        currently loaded playlist
+	      -->
+	    </div>
+    </div>
+</body>
+<script type="text/javascript">
+	var player = videojs('jtv');
+
+	player.playlist([{
+	  name:'CCTV-1综合',//视频标题
+	  description:'中国电视直播频道',//视频描述
+	  duration:0,//视频总时长，单位秒(s)
+	  sources: [{//视频资源地址以及视频的MIME类型
+			src: 'https://playfdcusa.olelive.olevod.tv:6443/tv/cctv1hd/hls.m3u8',
+	    type: 'application/x-mpegurl'
+	  }],
+	  //视频封面地址
+	  poster:'img/cctv.png',
+	  //右侧视频播放列表的图片
+	  thumbnail: [
+	  	{//默认图片
+          srcset: 'img/cctv.png',
+          type: 'image/jpeg',
+          media: '(min-width: 400px;)'
+        }
+  	  ]
+	}, {
+	  name:'CCTV-5体育',//视频标题
+	  description:'中国电视直播频道',//视频描述
+	  duration:0,//视频总时长，单位秒(s)
+	  sources: [{//视频资源地址以及视频的MIME类型
+			src: 'https://playfdcusa.olelive.olevod.tv:6443/tv/cctv5hd/hls.m3u8',
+	    type: 'application/x-mpegurl'
+	  }],
+	  //视频封面地址
+	  poster:'img/cctv.png',
+	  //右侧视频播放列表的图片
+	  thumbnail: [
+	  	{//默认图片
+          srcset: 'img/cctv.png',
+          type: 'image/jpeg',
+          media: '(min-width: 400px;)'
+        }
+  	  ]
+	}, {
+	  name:'CCTV-5体育+',
+	  description:'中国电视直播频道',
+	  duration:0,
+	  sources: [{
+	    src: 'https://playfdcusa.olelive.olevod.tv:6443/tv/cctv5phd/hls.m3u8',
+	    type: 'application/x-mpegurl'
+	  }],
+		poster:'img/cctv.png',
+		thumbnail: [
+	  	{//默认图片
+          srcset: 'img/cctv.png',
+          type: 'image/jpeg',
+          media: '(min-width: 400px;)'
+        }
+  	  ]
+	}, {
+	  name:'CCTV-16奥运',//视频标题
+	  description:'中国电视直播频道',//视频描述
+	  duration:0,//视频总时长，单位秒(s)
+	  sources: [{//视频资源地址以及视频的MIME类型
+			src: 'https://playfdcusa.olelive.olevod.tv:4443/tv/cctv16hd_bupt/hls.m3u8',
+	    type: 'application/x-mpegurl'
+	  }],
+	  //视频封面地址
+	  poster:'img/cctv.png',
+	  //右侧视频播放列表的图片
+	  thumbnail: [
+	  	{//默认图片
+          srcset: 'img/cctv.png',
+          type: 'image/jpeg',
+          media: '(min-width: 400px;)'
+        }
+  	  ]
+	}]);
+
+	player.playlistUi();
+	player.playlist.autoadvance(0); // 自动播放， 0秒延时
+	player.playlist.repeat(true); //循环播放
+	player.on('dblclick', function() { player.requestFullscreen(); });
+</script>
+</html>
