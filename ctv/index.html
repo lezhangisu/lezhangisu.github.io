@@ -137,11 +137,45 @@
         }
   	  ]
 	}, {
+	  name:'CCTV-5体育',//视频标题
+	  description:'中国电视直播频道',//视频描述
+	  duration:0,//视频总时长，单位秒(s)
+	  sources: [{//视频资源地址以及视频的MIME类型
+			src: 'http://112.25.48.68/live/program/live/cctv5hd/4000000/mnf.m3u8',
+	    type: 'application/x-mpegurl'
+	  }],
+	  //视频封面地址
+	  poster:'img/cctv.png',
+	  //右侧视频播放列表的图片
+	  thumbnail: [
+	  	{//默认图片
+          srcset: 'img/cctv.png',
+          type: 'image/jpeg',
+          media: '(min-width: 400px;)'
+        }
+  	  ]
+	}, {
 	  name:'CCTV-5体育+',
 	  description:'中国电视直播频道',
 	  duration:0,
 	  sources: [{
 	    src: 'https://playfdcusa.olelive.olevod.tv:6443/tv/cctv5phd/hls.m3u8',
+	    type: 'application/x-mpegurl'
+	  }],
+		poster:'img/cctv.png',
+		thumbnail: [
+	  	{//默认图片
+          srcset: 'img/cctv.png',
+          type: 'image/jpeg',
+          media: '(min-width: 400px;)'
+        }
+  	  ]
+	}, {
+	  name:'CCTV-5体育+',
+	  description:'中国电视直播频道',
+	  duration:0,
+	  sources: [{
+	    src: 'http://39.134.66.66/PLTV/88888888/224/3221225507/index.m3u8',
 	    type: 'application/x-mpegurl'
 	  }],
 		poster:'img/cctv.png',
